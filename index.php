@@ -2,15 +2,15 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Документ без названия</title>
+<title>Slider</title>
 <script src="jquery-1.7.2.min.js"></script>
 </head>
 <body>
 <style>
-#slider-wrap{ /* Оболочка слайдера и кнопок */
+#slider-wrap{ /* Оболочка слайдера и кнопок  Shell slider and buttons * /
 	width:660px; 
 	}
-#slider{ /* Оболочка слайдера */
+#slider{ /* Оболочка слайдера   shell slider */
 	width:640px;
 	height:360px;
 	overflow: hidden;
@@ -20,7 +20,7 @@
 	width:100%;
 	height:100%;
 	}
-.sli-links{ /* Кнопки смены слайдов */
+.sli-links{ /* Кнопки смены слайдов  Button switch slides */
 	margin-top:10px;
 	text-align:center;}
 .sli-links .control-slide{
@@ -36,7 +36,7 @@
 	background-position:center center;}
 .sli-links .control-slide.active{
 	background-position:center top;}
-#prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+#prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Пpедыдущий"  Link "Next" and "Previous"  */
 	display:block;
 	width:15px;
 	height:100%;
@@ -59,15 +59,13 @@
 
 /*
 
-HW Slider - простой слайдер на jQuery. 
-
+Setup script:
 Настройки скрипта:
 
-hwSlideSpeed - Скорость анимации перехода слайда.
-hwTimeOut - время до автоматического перелистывания слайдов.
-hwNeedLinks - включает или отключает показ ссылок "следующий - предыдущий". Значения true или false
-
-Подробнее на http://heavenweb.ru/
+hwSlideSpeed - Скорость анимации перехода слайда. Speed ​​slide transition animations.
+hwTimeOut - время до автоматического перелистывания слайдов. time before automatically turning slides.
+hwNeedLinks - включает или отключает показ ссылок "следующий - предыдущий". Значения true или false 
+				Enables or disables the display of links "next - previous." True or false
 
 */
 (function ($) {
