@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -142,5 +144,31 @@ var $linkArrow = $('<a id="prewbutton" href="#">&lt;</a><a id="nextbutton" href=
 		<div class="slide">Slider4</div>
 	</div>
 </div>
+<?
+	$dbc = mysqli_connect('localhost','root','','sony');
+	
+	$last_name = $_POST['lastname'];
+	$price = $_POST['price'];
+	
+	$query = "INSERT INTO sliders(last_name,price)
+					VALUES('$last_name','$price')";
+					
+	mysqli_query($dbc,$query);
+	
+	mysqli_close($dbc);
+	/*$dbc = mysqli_connect('localhost','root','','sony');
+	$query = "SELECT * FROM slider";
+	$result = mysqli_query($dbc, $query);
+	$row = mysqli_fetch_array($result);
+	
+	echo $row['last_name'];*/
+?>
+<form method="post" action=" ">
+    <label for="lastname">Last name:</label>
+    <input type="text" id="lastname" name="lastname" /><br />
+    <label for="email">Price:</label>
+    <input type="text" id="price" name="price" /><br />
+    <input type="submit" name="Submit" value="Submit" />
+  </form>
 </body>
 </html>
